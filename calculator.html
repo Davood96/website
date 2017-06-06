@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link
+            rel="stylesheet"
+            type="text/css"
+            href="CSS/document2.css"
+        />
+    </head>
+    
+    
+    
+    <body>
+        
+        <div>
+            <script id="calc_js" src="Javascript/calc_controller.js"></script>
+            <script id="calc_js2" src="Javascript/calc_model.js"></script>
+            <script id="bst_js" src="Javascript/BST.js"></script>
+            <script id="dlist_js" src="Javascript/DLIST.js"></script>
+            <script id="operator_js" src="Javascript/OPERATOR.js"></script>
+            <script id="operand_js" src="Javascript/OPERAND.js"></script>
+            <script id="fsm_js" src="Javascript/fsm.js"></script>
+            <script id="event_js" src="Javascript/event.js"></script>
+            <script id="dictionary_js" src="Javascript/dictionary.js"></script>
+            <script id="state_js" src="Javascript/state.js"></script>
+        </div>
+        
+        <div>
+            <p>
+                Here is a simple calculator. Operations include:    
+            </p>
+            <ul>
+                <li>Addition</li>
+                <li>Subtraction</li>
+                <li>Multiplication</li>
+                <li>Division</li>
+            </ul>
+        </div>
+        
+    <center>
+        <div id="screen">
+            <table class="display">
+                <tr>
+                    <td class="writing_area" id="history"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="writing_area" id="main"></td>
+                </tr>
+            </table>
+        </div>
+    </center>    
+    
+    <center>
+        <table class="buttons">
+                <tr>
+                    <td>
+                        <input type="button" value="(" name="Left Bracket" onClick="registerKey('(')"/>
+                    </td>
+                    <td>
+                        <input type="button" value=")" name="Right Bracket" onClick="registerKey(')')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="sin" name="sin" onClick="registerKey('sin(')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="C" name="clear" onClick="undoKey()"/>
+                    </td>
+                     <td>
+                        <input type="button" value="^" name="power" onClick="registerKey('^(')"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="1" name="One" onClick="registerKey('1')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="2" name="Two" onClick="registerKey('2')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="3" name="Three" onClick="registerKey('3')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="+" name="Plus"
+                               onClick="registerKey('+')"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" value="4" name="One" onClick="registerKey('4')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="5" name="Two" onClick="registerKey('5')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="6" name="Three" onClick="registerKey('6')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="-" name="Minus" onClick="registerKey('-')"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="7" name="One" onClick="registerKey('7')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="8" name="Two" onClick="registerKey('8')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="9" name="Three" onClick="registerKey('9')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="/" name="Div" onClick="registerKey('/')"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="." name="Decimal Point" 
+                               onClick="registerKey('.')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="0" name="Zero" onClick="registerKey('0')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="=" name="Equals" 
+                               onClick="registerKey('=')"
+                        />
+                    </td> 
+                    <td>
+                        <input type="button" value="*" name="Mult" onClick="registerKey('*')"/>
+                    </td>
+                </tr> 
+        </table>
+      
+    </center>
+    
+    </body>
+</html>

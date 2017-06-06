@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <!--
+    Setting character set and document-wide stylesheet
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <title>I have no idea what I'm doing</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="CSS/document_1.css"
+        />
+    </head>
+    
+    <!--
+    The scripts used for this webpage
+    -->
+    <div id="image_links_js">
+        <script src ="Javascript/image_links.js"></script>
+    </div>
+    
+    <!--
+    First element: Tables
+    ToDo: Make it a calculator
+    -->
+    <center>
+    <table class="data">
+        <tr>
+            <th>
+                Tables inside tables
+            </th>
+        </tr>   
+        <tr>
+            <td>
+                <table class="data">   
+                    <tr>
+                        <td class="data">
+                            Whoa, table-ception
+                        </td>
+                        <td class="data">
+                            Meow
+                        </td>
+                        <td class="data">
+                            Such wow. Very doge
+                        </td>
+                    </tr>
+                </table> 
+            </td>
+        </tr>
+    </table>
+    </center>
+    
+    <!--
+    Second element: Calculator Info
+    -->
+    <p>
+        If you want to use a calculator, click image: 
+           <img class="image_links" src="Resources/calc.PNG" width=25 height=25 
+           onClick="new_tab_url('http://localhost:8080/MyApp/calculator.html')">
+    </p>
+    
+    <!--
+    Last Element: Image Links
+    -->
+    <table align="center">
+        <td>
+            <img src="Resources/fb.PNG" class="image_links" 
+                 onClick="new_tab_url('http://www.facebook.com')">
+            <img src="Resources/google.PNG" class="image_links" 
+                 onClick="new_tab_url('http://www.google.com')"/>
+        </td>
+    </table>
+   
+</html>
+    

@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 1, 2017, 2:32:00 AM
+    Author     : You're back!
+*/
+
+td.writing_area
+{
+    background-color: darkseagreen;
+    width: 150px;
+    height: 25px;
+    color: white;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.buttons input
+{
+    width : 35px;
+    color : white;
+    background-color : black;
+}
+
