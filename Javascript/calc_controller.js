@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-var model = null;
+var calc_model = null;
 var history_field;
 var value_field;
 
 function init()
 {
-    model = new MODEL();
+    calc_model = new CALC_MODEL();
     history_field = window.document.getElementById("history");
     value_field = window.document.getElementById("main");
 }
@@ -22,24 +22,22 @@ function hello(str)
 
 function registerKey(key)
 { 
-    if(model === null)
+    if(calc_model === null)
     {
         init();
     }
-    var result = model.registerModel(key, history_field.innerHTML, value_field.innerHTML);
+    var result = calc_model.registerModel(key, history_field.innerHTML, value_field.innerHTML);
     value_field.innerHTML = result[0];
     history_field.innerHTML = result[1];
 }
 
 function undoKey()
 {
-    if(!model.isInitial())
+    if(!calc_model.isInitial())
     {
-         var result = model.undoModel();
+         var result = calc_model.undoModel();
          value_field.innerHTML = result[0];
          history_field.innerHTML = result[1];
     }
    
 }
-
-

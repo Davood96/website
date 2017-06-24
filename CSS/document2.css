@@ -16,6 +16,8 @@ td.writing_area
     color: white;
     text-align: right;
     vertical-align: bottom;
+    font-style: normal !important;
+    border: 2px solid black;
 }
 
 .buttons input
@@ -23,5 +25,14 @@ td.writing_area
     width : 35px;
     color : white;
     background-color : black;
+}
+.buttons
+{
+    border: 2px solid black;
+}
+
+#calc_container
+{
+    margin: 0px auto;
 }
 

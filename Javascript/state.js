@@ -40,7 +40,7 @@ S2.prototype.update = function(key, event)
 };
 S2.prototype.createPLUS = function(sign, factor, right_greedy)
 {
-    alert("Create a new PLUS!");
+    //alert("Create a new PLUS!");
     var result = sign ? new POSITIVE(new OPERAND(0), factor + right_greedy) : 
                new PLUS(0, 0, factor);
     return result;
@@ -48,7 +48,7 @@ S2.prototype.createPLUS = function(sign, factor, right_greedy)
 };
 S2.prototype.createSUBTRACT = function(sign, factor, right_greedy)
 {
-    alert("Create a new SUBTRACT!");
+    //alert("Create a new SUBTRACT!");
     var result = sign ? new NEGATIVE(new OPERAND(0), factor + right_greedy) : 
                new SUBTRACT(0, 0, factor);
     return result;
@@ -56,28 +56,28 @@ S2.prototype.createSUBTRACT = function(sign, factor, right_greedy)
 };
 S2.prototype.createMULT = function(sign, factor, right_greedy)
 {
-    alert("Create a new MULTIPLY!");
+    //alert("Create a new MULTIPLY!");
     var result = new MULTIPLY(0, 0, factor);
     return result;
     //return new PLUS(0, 0, precedence_factor);  
 };
 S2.prototype.createDIV = function(sign, factor, right_greedy)
 {
-    alert("Create a new DIVIDE!");
+    //alert("Create a new DIVIDE!");
     var result = new DIVIDE(0, 0, factor);
     return result;
     //return new PLUS(0, 0, precedence_factor);  
 };
 S2.prototype.createSIN = function(sign, factor, right_greedy)
 {
-    alert("Create a new SIN!");
+    //alert("Create a new SIN!");
     var result = new SIN(0, 0, factor);
     return result;
     //return new PLUS(0, 0, precedence_factor);  
 };
 S2.prototype.createPOW = function(sign, factor, right_greedy)
 {
-    alert("Create a new POWER!");
+    //alert("Create a new POWER!");
     var result = new POWER(0, 0, factor);
     return result;
     //return new PLUS(0, 0, precedence_factor);  
@@ -89,10 +89,12 @@ S2.prototype.is_op = function(chr)
 S2.prototype.postEvaluate = function(curr_root, values)
 {
     var operand_l, operand_r;
-
+    //alert("hello!"); 
+    //alert(curr_root.item.item.toString());
+   
     if(curr_root.right !== null)
-        postEvaluate(curr_root.right, values);
-     
+        this.postEvaluate(curr_root.right, values);
+  
     var node = curr_root.item;
     operand_l = node.prev.item;
     operand_r = node.next.item;
@@ -100,6 +102,7 @@ S2.prototype.postEvaluate = function(curr_root, values)
     node.item.num1 = operand_l;
     node.item.num2 = operand_r;
    
+    
     var result = node.item.calculate();
     var replacement_operand = new OPERAND(result);
     
@@ -110,7 +113,7 @@ S2.prototype.postEvaluate = function(curr_root, values)
    
     node.item = replacement_operand;
     if(curr_root.left !== null)
-        return postEvaluate(curr_root.left, values);
+        return this.postEvaluate(curr_root.left, values);
     
     return result;
 };
@@ -202,6 +205,7 @@ S2.prototype.test = function(str)
     var ret = this.algorithm(A);
     var values = ret[0];
     var tree = ret[1];
+    //alert(values.out());
     var curr_node = tree.root;
     var result = this.postEvaluate(curr_node, values);
     return result;   

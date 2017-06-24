@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<expanded_projects>
+    <project>
+        <description>
+            This project provided my first opportunity at professional software development
+            in a team, in particular agile development. My role on this project was mainly as 
+            design lead, meaning I was responsible for the architecture of the system and various algorithms
+            used. Some notable features include: graphing functionality, minimum parenthesization and favorites
+        </description>
+        <img>calc.png</img>
+        <img>calc_graph.png</img>
+        <img>calc_favorites.png</img>
+    </project>
+    <project>
+        <description>
+            A summer project aimed at improving my design skills. Eclipse and its git plugin were used for project organization
+            and version control respectively. In addition to the architecture, the following tasks had
+            to be undertaken:
+        </description>
+        <bullets>
+            <bullet>Collision Detection</bullet>
+            <bullet>Animation</bullet>
+            <bullet>Procedural Generation</bullet>
+        </bullets>
+    </project>
+     <project>
+        <description>
+            A summer project undertaken to gain experience in C++ development. This involved extensive use of pointers
+            and hence operations involving pointers, in addition to expanding possible approaches to software
+            design. Final design is essentially the STATE pattern, where each space on a monopoloy board is a LANDING_SPACE.
+            Git and GNU Make were used for version control and project organization respectively.
+        </description>
+    </project>
+</expanded_projects>

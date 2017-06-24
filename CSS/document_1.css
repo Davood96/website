@@ -16,16 +16,110 @@ and open the template in the editor.
    cursor: pointer;
 }
 
+li.navBar
+{
+    color: white;
+    display: inline;
+    font: 100 24px Arial;
+    padding: 10px;
+}
+
+li.navBar:hover
+{
+    opacity: 0.5 !important;
+    cursor: pointer;
+}
+
+#page_space
+{
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+}
+
+#page_space td
+{
+    /*border: 5px solid blue;*/
+    word-wrap: break-word;
+}
+
+
+
+#static
+{
+   vertical-align: top;
+   width: 435px;
+}
+
+#static p
+{
+    color: white;
+    font: 500 24px Palatino;
+    text-align: center;
+    font-style: italic;
+    padding: 10px 10px;
+}
+
+#static ul
+{
+    list-style: none;
+    text-align: center;
+    margin-right: 50px;
+}
+#static li
+{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
 html
 {
-    background-color: antiquewhite;
+    background-color: darkred;
 }
 
-table.data, td.data
+body
 {
-    border: 1px solid black;
-    
+    margin: 0;
 }
 
+.selectors
+{
+    background-color: black;
+    width: 100%;
+    margin-bottom: 10px;
+}
 
+.choices
+{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: transparent;
+    outline: 0;
+}
 
+.choices:hover
+{
+    background-color: grey !important;
+    cursor: pointer !important;
+}
+
+#Content_space
+{
+   width: 900px;
+   height: 590px;
+   border: 2px solid black;
+   table-layout: fixed;
+   margin-bottom: 0;
+   margin-top: 0;
+   margin-right: 0;
+   margin-left: auto;
+   background-color: lightgray;
+}
+
+#Content_space td
+{
+    vertical-align: top;
+   
+}

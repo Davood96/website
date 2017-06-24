@@ -1,0 +1,216 @@
+<tr>
+    <td>
+        <center>
+            <table id="calc" class="project_square">
+                <tr>
+                    <td class="project_image" style="background-image: url('Resources/calc.png')">
+                            <center>
+                                <button class="preview_button" onClick="open_modal(
+                                    function()
+                                    { 
+                                        var xhttp = new XMLHttpRequest();
+                                        xhttp.onreadystatechange = function()
+                                        {
+                                            var modal_number = 0;
+                                            var xmldoc = this.responseXML;
+                                            var project = xmldoc.getElementsByTagName('project')[modal_number];
+                                            var descr = project.getElementsByTagName('description')[0].firstChild.nodeValue;
+                                            var images = project.getElementsByTagName('img');
+                                            var num_images = images.length;
+                                            document.getElementById('summary').innerHTML = '<p>' + descr + '</p>'
+                                            var values = '';
+                                            for(i = 0; i < num_images; i++)
+                                            {
+                                                values += '<td><img src=\'Resources/' + 
+                                                        images[i].firstChild.nodeValue + '\' width=\'200\' height=\'200\'></td>';
+                                            }
+                                            document.getElementById('images_space').innerHTML = values;
+                                        };
+                                        xhttp.open('GET', 'XML/expanded_projects.xml', true);
+                                        xhttp.send();
+                                        
+                                    })">
+                                        See More
+                                </button>
+                            </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="hidden_content">
+                            <p class="project_title">
+                                Post-Fix Calculator
+                            </p>
+                        <ul>
+                            <li class="Java">
+                                <span>Java</span>
+                            </li>
+                        </ul>
+                        </div>   
+                        <div id="hidden_content">
+                        <p class="description">
+                            A 4-month long school project; my first experience at professional software development.
+                        </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </td>
+
+    <td>
+        <center>
+            <table id="calc" class="project_square">
+            <tr>
+                <td class="project_image" style="background-image: url('Resources/skate.png')">
+                        <center>
+                            <button class="preview_button" onClick="open_modal(
+                                function()
+                                {
+                                    var xhttp = new XMLHttpRequest();
+                                    xhttp.onreadystatechange = function()
+                                    {
+                                        var modal_number = 1;
+                                        var xmldoc = this.responseXML;
+                                        var project = xmldoc.getElementsByTagName('project')[modal_number];
+                                        var descr = project.getElementsByTagName('description')[0].firstChild.nodeValue;
+                                        document.getElementById('summary').innerHTML = '<p>' + descr + '</p>'
+                                        var values = '<ul>';
+                                        var bullets = project.getElementsByTagName('bullets')[0].getElementsByTagName('bullet');
+                                        var num_bullets = bullets.length;
+                                        for(i = 0; i < num_bullets; i++)
+                                        {
+                                            values += '<li>' + bullets[i].firstChild.nodeValue + '</li>';
+                                        }
+                                        values += '</ul>';
+                                        //alert(bullets[0].firstChild.nodeValue);
+                                        document.getElementById('summary').innerHTML += values;
+                                    };
+                                    xhttp.open('GET', 'XML/expanded_projects.xml', true);
+                                    xhttp.send();
+                                }
+                            )">See More</button>
+                        </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hidden_content">
+                        <p class="project_title">
+                            SkateBoard Run
+                        </p>
+                    <ul>
+                        <li class="Java">
+                            <span>Java</span>
+                        </li>
+                    </ul>
+                    </div>   
+                    <div id="hidden_content">
+                    <p class="description">
+                        A procedurally-generated side-scrolling game.
+                    </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </center>
+    </td>
+
+   <td>
+        <center>
+            <table id="calc" class="project_square">
+            <tr>
+                <td class="project_image" style="background-image: url('Resources/monopoly.jpg')">
+                        <center>
+                            <button class="preview_button" onClick="open_modal(
+                                function()
+                                {
+                                    var xhttp = new XMLHttpRequest();
+                                    xhttp.onreadystatechange = function()
+                                    {
+                                        var modal_number = 2;
+                                        var xmldoc = this.responseXML;
+                                        var project = xmldoc.getElementsByTagName('project')[modal_number];
+                                        var descr = project.getElementsByTagName('description')[0].firstChild.nodeValue;
+                                        document.getElementById('summary').innerHTML = '<p>' + descr + '</p>'
+                                    };
+                                    xhttp.open('GET', 'XML/expanded_projects.xml', true);
+                                    xhttp.send();
+                                }
+                                )">See More</button>
+                        </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hidden_content">
+                        <p class="project_title">
+                            Monopoly on Command Line
+                        </p>
+                    <ul>
+                        <li class="Cpp">
+                            <span>C++</span>
+                        </li>
+                        <li class="C">
+                            <span>C</span>
+                        </li>
+                    </ul>
+                    </div>   
+                    <div id="hidden_content">
+                    <p class="description">
+                        My first experience at C++ development, with the aid of previous knowledge in C.
+                    </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </center>
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+        <center>
+            <table id="calc" class="project_square">
+            <tr>
+                <td class="project_image" style="background-image: url('Resources/web_calc.png')">
+                        <center>
+                            <button class="preview_button" onClick="open_modal(
+                            function()
+                            {
+                                    var xhttp = new XMLHttpRequest();
+                                    xhttp.onreadystatechange = function()
+                                    {
+                                        document.getElementById('summary').innerHTML = this.responseText;
+                                    };
+                                    xhttp.open('GET', 'Text/calc.txt', true);
+                                    xhttp.send();
+                            })">
+                                See More</button>
+                        </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="hidden_content">
+                        <p class="project_title">
+                            Web Calculator
+                        </p>
+                    <ul>
+                        <li class="Java">
+                            <span>Java</span>
+                        </li>
+                    </ul>
+                    </div>   
+                    <div id="hidden_content">
+                    <p class="description">
+                        My first crack at web development
+                    </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </center>
+    </td>
+</tr>
