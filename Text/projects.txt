@@ -62,7 +62,7 @@
         <center>
             <table id="calc" class="project_square">
             <tr>
-                <td class="project_image" style="background-image: url('Resources/skate.png')">
+                <td class="project_image" style="background-image: url('Resources/skate.jpg')">
                         <center>
                             <button class="preview_button" onClick="open_modal(
                                 function()
