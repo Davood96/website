@@ -49,6 +49,12 @@ li.navBar:hover
 {
    vertical-align: top;
    width: 435px;
+   margin: 0 auto;
+}
+
+#static td
+{
+    text-align:  center;
 }
 
 #static p
