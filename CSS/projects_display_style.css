@@ -13,6 +13,13 @@ body
     margin: 0;
 }
 
+
+#container
+{
+   width: 100%;
+   table-layout: fixed
+}
+
 .project_square
 {   
     border: 5px solid darkgrey;
@@ -68,6 +75,11 @@ li.Cpp
     color: red;
 }
 
+li.Web
+{
+    color: blue;
+}
+
 li span
 {
     margin: 0;
@@ -101,68 +113,3 @@ p.description
 {
     display: block;
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(20,20,20,0.5);
-    overflow: auto;
-    
-}
-
-/* Modal Content/Box */
-.modal_content 
-{
-    background-color: white;
-    border: 5px solid grey;
-    margin-top: 12%;
-    margin-left: 25%;
-    width: 50%;
-    border-radius: 2%;
-    /*border: 2px solid black;*/
-   
-}
-#summary
-{
-    table-layout: fixed;
-    width: 100%;
-    word-wrap: break-word;
-    padding: 10px 10px;
-    font: 400 16px Times New Roman;
-    font-style: italic;
-}
-
-#images_space
-{
-    width: 100%;
-    table-layout: fixed;
-    /*border: 5px solid blue;*/
-}
-
-#images_space td
-{
-    text-align: center;
-    /*border: 2px solid black;*/
-}
-
-/* The Close Button */
-.close 
-{
-    color: grey;
-    float: right;
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus 
-{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-

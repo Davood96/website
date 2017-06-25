@@ -5,22 +5,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-
-    <!--
-    Setting character set and document-wide stylesheet
-    -->
+    
     <head>
         <meta charset="UTF-8">
         <title>Davood Anbarnam's Webpage</title>
         <link
             rel="stylesheet"
             type="text/css"
-            href="CSS/document_1.css"
-        />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="CSS/projects.css"
+            href="CSS/homepage_style.css"
         />
         <link
             rel='icon'
@@ -28,143 +20,83 @@ and open the template in the editor.
             href='Resources/icon.png'
         />
     </head>
-    <!--
-    The scripts used for this webpage
-    -->
-    <div id="image_links_js">
-        <script src ="Javascript/image_links.js"></script>
-        <script id="calc_js" src="Javascript/calc_controller.js"></script>
-        <script id="bst_js" src="Javascript/BST.js"></script>
-        <script id="dlist_js" src="Javascript/DLIST.js"></script>
-        <script id="operator_js" src="Javascript/OPERATOR.js"></script>
-        <script id="operand_js" src="Javascript/OPERAND.js"></script>
-        <script id="fsm_js" src="Javascript/fsm.js"></script>
-        <script id="event_js" src="Javascript/event.js"></script>
-        <script id="dictionary_js" src="Javascript/dictionary.js"></script>
-        <script id="state_js" src="Javascript/state.js"></script>
-        <script src="Javascript/calc_model.js"></script>
-    </div>
-    
-    <div id="modal_space" class="modal">
-        <div class="modal_content">
-            <span class="close" onclick="close_modal()">&times;</span>
-            <div id="edited_part">
-                <div id="summary">
-
-                </div> 
-                
-                <table id="images_space">
-             
-                </table>
-            </div>
-        </div>
-    </div>    
-    
-    <table class="selectors">
-        <tr>
-            <td style="vertical-align: bottom">
-                <ul style="padding: 10px; text-align: left;">
-                        <li id="1" class="navBar" style='opacity: 0.5;' onClick="change(0)">About Me</li>
-                        <li id="2" class="navBar" onClick="change(1)">Projects</li>
-                        <!--<li id="3" class="navBar" onClick="change(2)">Contact</li>-->
-                </ul>
-            </td>
-            <td>
-                <ul style="text-align: right;">
-                    <li class="navBar">
-                        <a href="Resources/CV.pdf" target="_blank">
-                            <img src="Resources/cv_image.jpg" width="50" height="50" style="border-radius: 25%;">
-                        </a>
-                    </li>
-                    <li class="navBar">
-                        <a href="https://www.linkedin.com/in/davood-anbarnam-23a96a86/" target="_blank">
-                            <img src="Resources/linkedin_image.jpg" width="50" height="50" style="border-radius: 25%;">
-                        </a>
-                    </li>
-                </ul>
-            </td>
-            
-        </tr>
-    </table>
-    
-    <table id="page_space">
-        <td id="static">
-            <table id="static">
-            <td>
-                <img src="Resources/profile.jpeg" width="200" height="200" style='border-radius: 50%'>
-            <p>
-                I used to think that computers worked on black magic. Rather, it's just that
-                the people behind them were magicians.
-            </p>
-            </td>
-            </table>
-        </td>
-        <td>
-            <table id='Content_space'>
-                <td>
-                    <div style='padding: 20px 20px; font: 400 20px Palatino'>
-                        My journey into software engineering and computer science began in 2014. I had no previous
-                        programming experience and, admittedly, chose to pursue a career in this field on pure instinct.
-                        To date, it has been the second best decision of my life.
-                    </div>
-                    <table>
-                        <tr>
-                            <td style='padding: 20px 20px;'>
-                                <img src='Resources/programming_logo_2.png' width='100' height='100' style="border-radius: 50%">
-                            </td>
-                            <td style='padding: 20px 20px; width: 35%; font: 400 16px Arial'>
-                                <div style='font: 400 16px Arial'>
-                                    Foundational knowledge in <span style="font-style: italic">Java</span> 
-                                    along with experience in:
-                                </div>
-                                <ul>
-                                    <li>C/C++</li>
-                                    <li>Javascript, CSS, HTML, AJAX</li>
-                                    <li>Eiffel</li>
-                                    <li>Verilog</li>
-                                </ul>
-                            </td>
-                            <td style='padding: 20px 20px;'>
-                                <img src='Resources/tools.png' width='100' height='100' style="border-radius: 50%">
-                            </td>
-                            <td style='padding: 20px 20px; width: 35%;'>
-                                <div style='font: 400 16px Arial'>
-                                    Experience in version control with <span style="font-style: italic">git</span>. Familiar
-                                    with <span style="font-style: italic">Eclipse</span> and <span style="font-style: italic">NetBeans</span>
-                                    IDEs, in addition to <span style="font-style: italic">GNU Make</span>.
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style='padding: 20px 20px;'>
-                                <img src='Resources/university.png' width='100' height='100' style="border-radius: 50%">
-                            </td>
-                            <td style='padding: 20px 20px; width: 35%;'>
-                                <div style='font: 400 16px Arial'>
-                                    Lassonde School of Engineering, York University;<br>
-                                    4th Year Software Engineering;<br>
-                                    Peer Tutor for 1st year calculus since 2015;<br>
-                                    Tutor for Computer Science since 2016
-                                </div> 
-                            </td>
-                            <td style='padding: 20px 20px;'>
-                                <img src='Resources/sport.png' width='100' height='100' style="border-radius: 50%">
-                            </td>
-                            <td style='padding: 20px 20px; width: 35%;'>
-                                <div style='font: 400 16px Arial'>
-                                    Avid squash player;<br>
-                                    Recreational soccer player;<br>
-                                    Recreational swimmer;
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </table>
-        </td>  
-    </table>
-    
-    
    
+    <body onload="initPage()">
+        
+        <div id="image_links_js">
+            <script src ="Javascript/main_controller.js"></script>
+            <script id="calc_js" src="Javascript/calc_controller.js"></script>
+            <script id="bst_js" src="Javascript/BST.js"></script>
+            <script id="dlist_js" src="Javascript/DLIST.js"></script>
+            <script id="operator_js" src="Javascript/OPERATOR.js"></script>
+            <script id="operand_js" src="Javascript/OPERAND.js"></script>
+            <script id="fsm_js" src="Javascript/fsm.js"></script>
+            <script id="event_js" src="Javascript/event.js"></script>
+            <script id="dictionary_js" src="Javascript/dictionary.js"></script>
+            <script id="state_js" src="Javascript/state.js"></script>
+            <script src="Javascript/calc_model.js"></script>
+        </div>
+
+        <div id="modal_space" class="modal">
+            <div class="modal_content">
+                <span class="close" onclick="close_modal()">&times;</span>
+                <div id="edited_part">
+                    <div id="summary">
+
+                    </div> 
+
+                    <table id="images_space">
+
+                    </table>
+                </div>
+            </div>
+        </div>    
+
+        <table class="selectors">
+            <tr>
+                <td style="vertical-align: bottom">
+                    <ul style="padding: 10px; text-align: left;">
+                            <li id="0" class="navBar" style='opacity: 0.5;' onClick="change(0)">About Me</li>
+                            <li id="1" class="navBar" onClick="change(1)">Projects</li>
+                            <!--<li id="3" class="navBar" onClick="change(2)">Contact</li>-->
+                    </ul>
+                </td>
+                <td>
+                    <ul style="text-align: right;">
+                        <li class="navBar">
+                            <a href="Resources/CV.pdf" target="_blank">
+                                <img src="Resources/cv_image.jpg" width="50" height="50" style="border-radius: 25%;">
+                            </a>
+                        </li>
+                        <li class="navBar">
+                            <a href="https://www.linkedin.com/in/davood-anbarnam-23a96a86/" target="_blank">
+                                <img src="Resources/linkedin_image.jpg" width="50" height="50" style="border-radius: 25%;">
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+
+            </tr>
+        </table>
+
+        <table id="page_space">
+            <td id="static">
+                <table id="static">
+                <td>
+                    <img src="Resources/profile.jpeg" width="200" height="200" style='border-radius: 50%'>
+                <p>
+                    I used to think that computers worked on black magic. Rather, it's just that
+                    the people behind them were magicians.
+                </p>
+                </td>
+                </table>
+            </td>
+            <td>
+                <div id='Content_space'>
+
+                </div>
+            </td>  
+        </table>
+    </body>
 </html>
     

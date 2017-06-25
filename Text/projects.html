@@ -1,3 +1,11 @@
+<link
+        rel="stylesheet"
+        type="text/css"
+        href="CSS/projects_display_style.css"
+/>
+
+<!--Implicit Surrounding <table>-->
+<table id='container'>
 <tr>
     <td>
         <center>
@@ -166,7 +174,6 @@
         </table>
         </center>
     </td>
-
 </tr>
 
 <tr>
@@ -184,7 +191,7 @@
                                     {
                                         document.getElementById('summary').innerHTML = this.responseText;
                                     };
-                                    xhttp.open('GET', 'Text/calc.txt', true);
+                                    xhttp.open('GET', 'Text/calc.html', true);
                                     xhttp.send();
                             })">
                                 See More</button>
@@ -198,8 +205,8 @@
                             Web Calculator
                         </p>
                     <ul>
-                        <li class="Java">
-                            <span>Java</span>
+                        <li class="Web">
+                            <span>Javascript, HTML, CSS</span>
                         </li>
                     </ul>
                     </div>   
@@ -214,3 +221,5 @@
         </center>
     </td>
 </tr>
+</table>
+<!--Implicit Surrounding </table>-->

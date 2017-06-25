@@ -20,18 +20,27 @@ var nav_model = null;
 
 function change(id)
 {
-    //alert("Called");
-    if(nav_model === null)
-        nav_model = new NAV_MODEL();
     
     if(id !== nav_model.currBar)
     {
         //alert("IN");
-        document.getElementById(nav_model.currBar + 1).style["opacity"] = "1";
-        document.getElementById(id + 1).style["opacity"] = "0.5";
+        document.getElementById(nav_model.currBar).style["opacity"] = "1";
+        document.getElementById(id).style["opacity"] = "0.5";
         nav_model.clickBar(id);
     }
        
+}
+
+/**
+ *  Initialises page with beginning
+ *  contents
+ * 
+ */
+function initPage()
+{
+    nav_model = new NAV_MODEL();
+    document.getElementById("0").style["opacity"] = "0.5";
+    nav_model.clickBar("0");
 }
 
 
@@ -44,12 +53,12 @@ NAV_BAR = function(url, update)
 NAV_MODEL = function()
 {
     this.imp = new ArrayBuffer(3);
-    this.imp[0] = new NAV_BAR("Text/about_me.txt", 
+    this.imp[0] = new NAV_BAR("Text/about_me.html", 
                   function()
                   {
                       document.getElementById("Content_space").innerHTML = this.responseText;
                   });
-    this.imp[1] = new NAV_BAR("Text/projects.txt", 
+    this.imp[1] = new NAV_BAR("Text/projects.html", 
                   function()
                   {
                       document.getElementById("Content_space").innerHTML = this.responseText;
