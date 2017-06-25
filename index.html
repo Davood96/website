@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Homepage
 -->
 <html>
     
@@ -23,20 +21,28 @@ and open the template in the editor.
    
     <body onload="initPage()">
         
-        <div id="image_links_js">
-            <script src ="Javascript/main_controller.js"></script>
-            <script id="calc_js" src="Javascript/calc_controller.js"></script>
+        <!-- JS files -->
+        <div>
+            <script src ="Javascript/MainPage/main_controller.js"></script>
+            <script src ="Javascript/MainPage/modal_model.js"></script>
+            <script src ="Javascript/MainPage/nav_model.js"></script>
+            
+            <script src="Javascript/Calculator/calc_model.js"></script>
+            <script id="calc_js" src="Javascript/Calculator/calc_controller.js"></script> 
+            <script id="operator_js" src="Javascript/Calculator/OPERATOR.js"></script>
+            <script id="operand_js" src="Javascript/Calculator/OPERAND.js"></script>
+            
             <script id="bst_js" src="Javascript/BST.js"></script>
             <script id="dlist_js" src="Javascript/DLIST.js"></script>
-            <script id="operator_js" src="Javascript/OPERATOR.js"></script>
-            <script id="operand_js" src="Javascript/OPERAND.js"></script>
             <script id="fsm_js" src="Javascript/fsm.js"></script>
             <script id="event_js" src="Javascript/event.js"></script>
             <script id="dictionary_js" src="Javascript/dictionary.js"></script>
             <script id="state_js" src="Javascript/state.js"></script>
-            <script src="Javascript/calc_model.js"></script>
+            
         </div>
-
+        
+        
+        <!-- Modal-related items -->
         <div id="modal_space" class="modal">
             <div class="modal_content">
                 <span class="close" onclick="close_modal()">&times;</span>
@@ -52,6 +58,7 @@ and open the template in the editor.
             </div>
         </div>    
 
+        <!-- Navigation Bar -->
         <table class="selectors">
             <tr>
                 <td style="vertical-align: bottom">
@@ -75,10 +82,11 @@ and open the template in the editor.
                         </li>
                     </ul>
                 </td>
-
             </tr>
         </table>
 
+        
+        <!-- Page Layout -->
         <table id="page_space">
             <td id="static">
                 <table id="static">
@@ -98,5 +106,6 @@ and open the template in the editor.
             </td>  
         </table>
     </body>
+    
 </html>
     
