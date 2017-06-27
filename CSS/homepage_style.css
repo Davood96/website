@@ -114,6 +114,7 @@ body
 #Content_space
 {
    width: 900px;
+   height: 80%;
    border: 2px solid black;
    table-layout: fixed;
    margin-bottom: 0;
