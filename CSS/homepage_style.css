@@ -116,7 +116,8 @@ body
    width: 900px;
    height: 80%;
    border: 2px solid black;
-   table-layout: fixed;
+   position: fixed;
+   overflow: scroll;
    margin-bottom: 0;
    margin-top: 0;
    margin-right: 0;
