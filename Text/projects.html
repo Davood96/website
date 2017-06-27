@@ -1,8 +1,3 @@
-<link
-        rel="stylesheet"
-        type="text/css"
-        href="CSS/projects_display_style.css"
-/>
 
 <!--Implicit Surrounding <table>-->
 <table id='container'>
@@ -140,7 +135,7 @@
                                         var xmldoc = this.responseXML;
                                         var project = xmldoc.getElementsByTagName('project')[modal_number];
                                         var descr = project.getElementsByTagName('description')[0].firstChild.nodeValue;
-                                        document.getElementById('summary').innerHTML = '<p>' + descr + '</p>'
+                                        document.getElementById('summary').innerHTML = '<p>' + descr + '</p>';
                                     };
                                     xhttp.open('GET', 'XML/expanded_projects.xml', true);
                                     xhttp.send();
