@@ -16,9 +16,10 @@ body
 
 #container
 {
-   width: 100%;
-   table-layout: fixed
+   width: 900px;
+   table-layout: fixed;
 }
+
 
 .project_square
 {   

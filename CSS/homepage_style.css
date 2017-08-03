@@ -8,7 +8,6 @@ and open the template in the editor.
     Author     : You're back!
 */
 
-
 .image_links
 {
    width: 50px;
@@ -91,7 +90,8 @@ body
 .selectors
 {
     background-color: black;
-    width: 100%;
+    table-layout: fixed;
+    width: 1366px;
     margin-bottom: 10px;
 }
 
@@ -116,7 +116,7 @@ body
    width: 900px;
    height: 80%;
    border: 2px solid black;
-   position: fixed;
+   position: absolute;
    overflow: scroll;
    margin-bottom: 0;
    margin-top: 0;
@@ -128,7 +128,6 @@ body
 #Content_space td
 {
     vertical-align: top;
-   
 }
 
 /*Modal Content Begins Now*/
@@ -154,6 +153,7 @@ body
     margin-left: 25%;
     width: 50%;
     border-radius: 2%;
+    overflow : scroll;
     /*border: 2px solid black;*/
    
 }
@@ -173,7 +173,6 @@ body
 #images_space
 {
     width: 100%;
-    table-layout: fixed;
     /*border: 5px solid blue;*/
 }
 
