@@ -58,6 +58,8 @@ function open_modal(func)
 function close_modal()
 {
    //alert("Hello"); 
+   if(calc_model !== null)
+        calc_model = null;
    document.getElementById("edited_part").innerHTML = 
                 "<div id='summary'></div><table id='images_space'></table>";
         

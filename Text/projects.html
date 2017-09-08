@@ -185,10 +185,11 @@
                                     xhttp.onreadystatechange = function()
                                     {
                                         document.getElementById('summary').innerHTML = this.responseText;
+                                        //CALC_MODEL.reset();
                                     };
                                     xhttp.open('GET', 'Text/calc.html', true);
                                     xhttp.send();
-                            })">
+                            }, calc_model)">
                                 See More</button>
                         </center>
                 </td>

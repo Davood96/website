@@ -9,11 +9,9 @@ var calc_model = null;
 function init()
 {
     calc_model = new CALC_MODEL();
-    history_field = window.document.getElementById("history");
-    value_field = window.document.getElementById("main");
 }
 
-function hello(str)
+function hello()
 {
     alert("Hello");
 }
