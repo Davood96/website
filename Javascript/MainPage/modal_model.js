@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-MODAL_MODEL = function()
-{};
+MODAL_MODEL = function(shutdown)
+{
+    this.close = shutdown;
+};
 
 MODAL_MODEL.prototype.showModal = function(modal_func)
 {

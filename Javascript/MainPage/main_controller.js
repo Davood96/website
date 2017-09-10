@@ -44,12 +44,15 @@ function initPage()
 
 
 var modal_model = null;
-function open_modal(func)
+function open_modal(func, shtdown)
 {
     //alert(project_num);
     //func();
+    //alert(func);
     if(modal_model === null)
-        modal_model = new MODAL_MODEL();
+        modal_model = new MODAL_MODEL(shtdown);
+    else
+        modal_model.close = shtdown;
   
     modal_model.showModal(func);
    
@@ -58,8 +61,10 @@ function open_modal(func)
 function close_modal()
 {
    //alert("Hello"); 
-   if(calc_model !== null)
-        calc_model = null;
+   /*if(calc_model !== null)  Quick-fix
+        calc_model = null;*/
+
+   modal_model.close();
    document.getElementById("edited_part").innerHTML = 
                 "<div id='summary'></div><table id='images_space'></table>";
         

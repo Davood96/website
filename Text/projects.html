@@ -32,7 +32,8 @@
                                         xhttp.open('GET', 'XML/expanded_projects.xml', true);
                                         xhttp.send();
                                         
-                                    })">
+                                    }, 
+                                    function(){})">
                                         See More
                                 </button>
                             </center>
@@ -91,7 +92,8 @@
                                     };
                                     xhttp.open('GET', 'XML/expanded_projects.xml', true);
                                     xhttp.send();
-                                }
+                                },
+                                function(){}
                             )">See More</button>
                         </center>
                 </td>
@@ -140,6 +142,8 @@
                                     xhttp.open('GET', 'XML/expanded_projects.xml', true);
                                     xhttp.send();
                                 }
+                                ,
+                                function(){}
                                 )">See More</button>
                         </center>
                 </td>
@@ -189,7 +193,7 @@
                                     };
                                     xhttp.open('GET', 'Text/calc.html', true);
                                     xhttp.send();
-                            }, calc_model)">
+                            }, kill_calculator)">
                                 See More</button>
                         </center>
                 </td>

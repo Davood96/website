@@ -33,7 +33,7 @@ li.navBar:hover
 {
     width: 100%;
     table-layout: fixed;
-    margin: 0;
+    padding-top: 100px;
 }
 
 #page_space td
@@ -91,6 +91,8 @@ body
 {
     background-color: black;
     table-layout: fixed;
+    position: fixed;
+    z-index: 1;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -136,7 +138,7 @@ body
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgba(20,20,20,0.5);
@@ -153,7 +155,7 @@ body
     margin-left: 25%;
     width: 50%;
     border-radius: 2%;
-    overflow : scroll;
+    overflow-x: scroll;
     /*border: 2px solid black;*/
    
 }
@@ -162,7 +164,7 @@ body
 #summary
 {
     table-layout: fixed;
-    width: 600px;
+    width: 95%;
     word-wrap: break-word;
     padding: 10px 10px;
     font: 400 16px Times New Roman;
@@ -186,7 +188,8 @@ body
 .close 
 {
     color: grey;
-    float: right;
+    position: absolute;
+    margin-left: 47%;
     font-size: 36px;
     font-weight: bold;
 }

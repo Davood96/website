@@ -33,6 +33,6 @@ td.writing_area
 
 #calc_container
 {
-    margin: 0px auto;
+    align-self: center;
 }
 

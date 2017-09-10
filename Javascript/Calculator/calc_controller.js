@@ -11,6 +11,11 @@ function init()
     calc_model = new CALC_MODEL();
 }
 
+function kill_calculator()
+{
+    calc_model = null;
+}
+
 function hello()
 {
     alert("Hello");
