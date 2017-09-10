@@ -203,3 +203,12 @@ body
 }
 
 /*Modal Content Ends*/
+
+@media only screen and (max-width: 768px) 
+{
+    /* For mobile phones: */
+    #page_space
+    {
+        background: blue;
+    }
+}
