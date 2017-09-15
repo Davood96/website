@@ -53,7 +53,8 @@ NAV_MODEL = function()
  */
 NAV_MODEL.prototype.clickBar = function(id)
 {
-    var mobile = window.innerWidth <= 800 && window.innerHeight <= 600;
+    var mobile = document.documentElement.clientWidth <= 800 && 
+            document.documentElement.clientHeight <= 600;
     this.currBar = id;
     var next = this.imp[id];
     var format = mobile ? next.url.mobile : next.url.desktop;
