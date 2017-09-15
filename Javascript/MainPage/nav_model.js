@@ -25,22 +25,22 @@ NAV_BAR = function(url, update)
 NAV_MODEL = function()
 {
     this.imp = new ArrayBuffer(3);
-    this.imp[0] = new NAV_BAR("Text/about_me.html", 
+    this.imp[0] = new NAV_BAR({desktop: "Text/about_me.html", mobile: "Text/about_me.html"}, 
                   function()
                   {
-                      //document.getElementById("Content_space").innerHTML = this.responseText;
+                      document.getElementById("Content_space").innerHTML = this.responseText;
                       document.getElementById("Content_space_mobile").innerHTML = this.responseText;
                   });
-    this.imp[1] = new NAV_BAR("Text/projects.html", 
+    this.imp[1] = new NAV_BAR({desktop: "Text/projects.html", mobile : "Text/projects_mobile.html"}, 
                   function()
                   {
-                      //document.getElementById("Content_space").innerHTML = this.responseText;
+                      document.getElementById("Content_space").innerHTML = this.responseText;
                       document.getElementById("Content_space_mobile").innerHTML = this.responseText;
                   });
-    this.imp[2] = new NAV_BAR("Text/contact.txt", 
+    this.imp[2] = new NAV_BAR({desktop: "Text/contact.txt", mobile: "Text/contact.txt"}, 
                   function()
                   {
-                      //document.getElementById("Content_space").innerHTML = this.responseText;
+                      document.getElementById("Content_space").innerHTML = this.responseText;
                       document.getElementById("Content_space_mobile").innerHTML = this.responseText;
                   });
     this.currBar = 0;
@@ -53,11 +53,12 @@ NAV_MODEL = function()
  */
 NAV_MODEL.prototype.clickBar = function(id)
 {
-    //alert("Hi");
+    var mobile = window.innerWidth <= 800 && window.innerHeight <= 600;
     this.currBar = id;
     var next = this.imp[id];
+    var format = mobile ? next.url.mobile : next.url.desktop;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = next.update;
-    xhttp.open("GET", next.url, true);
+    xhttp.open("GET", format, true);
     xhttp.send();
 };

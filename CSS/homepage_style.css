@@ -118,7 +118,7 @@ body
    width: 65%;
    height: 500px;
    border: 2px solid black;
-   position: fixed;
+   position: absolute;
    overflow: scroll;
    margin-bottom: 0;
    margin-top: 0;
@@ -235,11 +235,12 @@ and (max-device-width : 800px)
     
     #Content_space_mobile
     {
-        width : 98%;
+        width : 90%;
+        margin-left: 5%;
         overflow: scroll;
         background: gray;
         height: 450px;
-        border: 2px solid white;
+        margin-bottom: 10%;
         background-color: lightgray;
     }
     
