@@ -28,17 +28,20 @@ NAV_MODEL = function()
     this.imp[0] = new NAV_BAR("Text/about_me.html", 
                   function()
                   {
-                      document.getElementById("Content_space").innerHTML = this.responseText;
+                      //document.getElementById("Content_space").innerHTML = this.responseText;
+                      document.getElementById("Content_space_mobile").innerHTML = this.responseText;
                   });
     this.imp[1] = new NAV_BAR("Text/projects.html", 
                   function()
                   {
-                      document.getElementById("Content_space").innerHTML = this.responseText;
+                      //document.getElementById("Content_space").innerHTML = this.responseText;
+                      document.getElementById("Content_space_mobile").innerHTML = this.responseText;
                   });
     this.imp[2] = new NAV_BAR("Text/contact.txt", 
                   function()
                   {
-                      document.getElementById("Content_space").innerHTML = this.responseText;
+                      //document.getElementById("Content_space").innerHTML = this.responseText;
+                      document.getElementById("Content_space_mobile").innerHTML = this.responseText;
                   });
     this.currBar = 0;
 };

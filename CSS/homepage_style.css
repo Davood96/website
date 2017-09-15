@@ -29,14 +29,14 @@ li.navBar:hover
     cursor: pointer;
 }
 
-#page_space
+#page_space-desktop
 {
     width: 100%;
     table-layout: fixed;
     padding-top: 100px;
 }
 
-#page_space td
+#page_space-desktop td
 {
     /*border: 5px solid blue;*/
     word-wrap: break-word;
@@ -118,7 +118,7 @@ body
    width: 65%;
    height: 500px;
    border: 2px solid black;
-   position: absolute;
+   position: fixed;
    overflow: scroll;
    margin-bottom: 0;
    margin-top: 0;
@@ -188,7 +188,7 @@ body
 .close 
 {
     color: grey;
-    position: absolute;
+    position: fixed;
     margin-left: 47%;
     font-size: 36px;
     font-weight: bold;
@@ -202,4 +202,59 @@ body
     cursor: pointer;
 }
 
+#mobile_content
+{
+    visibility: hidden;
+}
+
 /*Modal Content Ends*/
+
+
+@media only screen
+and (max-device-width : 800px)
+{
+    #desktop_content
+    {
+        display: none;
+    }
+    
+    #static
+    {
+        width: 100%;
+        margin-top : 20%;
+    }
+    
+    #mobile_content
+    {
+        visibility: visible;
+        width: 100%;
+        text-align: center;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #Content_space_mobile
+    {
+        width : 98%;
+        overflow: scroll;
+        background: gray;
+        height: 450px;
+        border: 2px solid white;
+        background-color: lightgray;
+    }
+    
+.modal_content 
+{
+    
+    margin-top: 12%;
+    margin-left: 10%;
+    width: 80%;
+   
+}
+
+.close 
+{
+    margin-left: 70%
+}
+    
+}
